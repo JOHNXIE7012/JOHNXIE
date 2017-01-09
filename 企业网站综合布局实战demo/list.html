@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>johnxie个人主页</title>
+		<link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css" 		rel="stylesheet">
+		<script src="js/setHomeSetFav.js" type="text/javascript" charset="gb2312"></script> 
+		<style>
+			*{padding: 0;margin: 0;font-size: 12px;}
+			body{background:#f5f5f5;} 
+			li{list-style-type: none;}
+			.top{width: 100%;height: 27px;background: url(img/top_bg.jpg) repeat-x;}
+			.top_content{width: 1000px;margin: 0 auto;}
+			.top_content li{float: right;list-style: url(img/li_bg.gif);width: 70px;}
+			.top_content li a:link,	.top_content li a:visited{color: #8e8e8e;text-decoration: none;}
+			.top_content li a:hover,.top_content li a:active{color: #900;text-decoration: none;}
+			.wrap{width: 1000px;margin: 0 auto;}
+			.logo{height: 80px;background: #fff;}
+			.logo_left{width: 200px;float: left;}
+			.logo_right{width: 300px;float: right;height: 28px;margin-top: 30px;color: #8e8e8e;}
+			.logo_right img{vertical-align: middle;margin-right:10px ;}
+			.tel{color: #c00;font-family: "微软雅黑";font-size: 16px;}
+			.nav1{height: 40px;background: rgb(118,109,102);border-radius: 4px;position: relative;}
+			.nav1 ul{list-style-type: none;}
+			.nav1 ul li{display:inline-block;width: 100px;text-align: center;line-height: 40px;}
+			.nav1 ul li a:link,.nav1 ul li a:visited{text-decoration: none;color: #fff;font-size: 16px;font-family: "微软雅黑";}
+			.nav1 ul li a:hover,.nav1 ul li a:active{text-decoration: none;color: #ff0;font-size: 16px;font-family: "微软雅黑";}
+			.nav1 form{float: right;position: absolute;right: 40px;top: 7px;}
+			.search_text{width: 190px;height: 26px;border-style:none ;border-radius: 4px;padding-right: 30px;}
+			#searchicon{position: absolute;right: 45px;top: 15px;}
+			
+			#carousel-example-generic a{display: none;}
+			#carousel-example-generic:hover  a{display: block;}
+			.main{height: 250px;background: #fff;margin-top: 5px;}
+			.news{width: 340px;border: 1px solid #e8e8e8;}
+			.course{width: 410px;border: 1px solid #e8e8e8;margin: 0 7px;}
+			.sidebar{width: 230px;}
+			.news,.course,.sidebar{height: 250px;float: left;}
+			.title{height: 35px;border: 2px solid #e8e8e8;}
+			.title_left{font-size: 14px;font-weight: bold;width: 70%;font-family: "微软雅黑";color: #786f66;float: left;margin: 0;line-height: 35px;padding-left:20px ;}
+			.title_right{width: 20%;float: right;line-height: 35px;text-align: right;padding-right: 10px;}
+			.title_right a{text-decoration: none;color: #999;font-size: 9px;}
+			.pic_news{height: 80px;line-height: 22px;}
+			.pic_news img,.course_pic img{float: left;margin: 0 5px;}
+			.pic_news a,.course_pic a{color: #c00;text-decoration: none;font-size: 12px;}
+			.pic_news h2,.course_pic h2{line-height: 10px;font-size: 20px;font-family: "微软雅黑";font-weight: bold;margin: 10px;}
+			/*.list_box{margin-top: 15px;}*/
+			.list_box li{background: url(img/list.jpg) no-repeat;padding-left: 10px;margin: 8px;border-bottom: 1px dotted #ccc;}
+			.list_box li a{color: #000;}
+			.list_box li a:hover{color: #f00;text-decoration: none;}
+			.date{color: #999;float: right;font-size: 10px;}
+			.course_pic{height: 120px;margin-top: 10px;line-height: 22px;}
+			.course_pic p{font-size: 12px;}
+			.course_type{width: 372px;height: 37px;background: url(img/product_type_bg.jpg) no-repeat;margin: 20px auto;}
+			.course_type li{float: left;line-height: 37px;margin: 0 15px;text-align: center;}
+			.video{height: 185px;border: 1px solid #E8E8E8;}
+			.video_content{height: 160px;}
+			.sidebar_ad{height: 55px;border: 1px solid#E8E8E8;margin-top: 10px;}
+			.copyright{width: 100%;height: 200px;background: #E8E8E8;margin-top: 10px;clear: both;}
+			.copyright_content{width: 1000px;margin: 0 auto;padding-top: 30px;}
+			.copyright_content li{float: left;width: 200px;background: url(img/line.png) no-repeat right center;text-align: center; line-height: 25px;font-family: "微软雅黑";}
+			.copyright_content li:last-of-type{background: none;}
+			.copyright_content a{text-decoration: none;color: #999;font-size: 18px;}
+			.copyright_content ul li ul a{font-size: 14px;}
+			.list_main{margin-top: 10px;overflow: hidden;}
+			.news_type{width: 220px;border: 1px solid #E8E8E8;float: left;background: #fff;}
+			.list_box{background: #fff;width: 770px;border: 1px solid #E8E8E8;float: right;}
+			.news_type h4{height: 35px;line-height: 35px;font-size: 14px;font-family: "微软雅黑";color: #666;background: url(img/titile_bg.gif) repeat-x;padding-left: 20px;}
+			.news_type_content {height: 365px;background: url(img/content_bg.gif) repeat-x;}
+			.news_type_content  li{height: 30px ;line-height: 30px;}
+			.news_type_content  li a{color: #666;text-decoration: none;background: url(img/li_bg.gif) no-repeat left center;padding-left: 20px;display: block;background-position:5%;}
+			.news_type_content  li a:hover{color: #009cdf;background: url(img/li_bg2.gif) no-repeat left center;background-color: #f2f2f2;background-position:5%;}
+			.list_box h4{font-size: 14px;font-family: "微软雅黑";color: #666;height: 35px;line-height: 35px;background: url(img/type_bg.png) repeat-x;padding-left: 20px;}
+			.page{height: 40px;margin-top: 10px;text-align: center;clear: both;}
+			.page a{border: 1px solid #E8E8E8;text-decoration: none;margin: 5px;padding: 5px 10px;color: #000;border-radius: 8px;display: inline-block;}
+			.page a:hover{color: #FFFFFF;background: #cc1b1b;}
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<div class="top_content">
+				<ul>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#" onclick="AddFavorite(window.location,document.title)">加入收藏</a></li>
+					<li><a href="#" onclick="SetHome(window.location)">设为首页</a></li>
+				</ul>
+			</div>
+		</div><!--top结束-->
+		
+		<div class="wrap">
+			<div class="logo">
+				<div class="logo_left">
+					<img src="img/logo.jpg"alt="慕课网"/>
+				</div>
+				<div class="logo_right">
+					<img src="img/tel.jpg" alt="服务热线"/>24小时服务热线：
+					<span class="tel">
+						123-456-7890
+					</span>
+				</div>
+			</div><!--logo结束-->
+			<div class="nav1">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="list.html">关于慕课</a></li>
+					<li><a href="list.html">新闻动态</a></li>
+					<li><a href="list.html">课程中心</a></li>
+					<li><a href="list.html">在线课程</a></li>
+					<li><a href="list.html">人才招聘</a></li>
+				</ul>
+				<form action="" method="post">
+					<input type="text" class="search_text"/>
+				</form>
+				<button type="button"><span id="searchicon" class="glyphicon glyphicon-search"></span></button>
+			</div><!--导航条-->
+			<div class="carousel1"style="height: 243px;">
+				<img src="img/ad.jpg"/>
+			</div><!--轮播图-->
+			<div class="list_main">
+				<div class="news_type">
+					<h4>新闻中心</h4>
+					<div class="news_type_content">
+						<ul>
+							<li><a href="list.html">公司新闻</a></li>
+							<li><a href="list.html">行业新闻</a></li>
+							<li><a href="list.html">媒体报道</a></li>
+							<li><a href="list.html">活动专题</a></li>
+							<li><a href="list.html">精彩视频</a></li>
+							<li><a href="list.html">资源下载</a></li>
+							<li><a href="list.html">公司内刊</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="list_box">
+					<h4>新闻中心</h4>
+					<div class="list_box">
+						<ul>
+							<li><span class="date">2014-06-01</span><a href="news.html">【慕客访谈 用户篇】“有为屌丝”在路上</a></li>
+							<li><span class="date">2014-06-01</span><a href="news.html">【有奖活动】给父亲的三行书信</a></li>
+							<li><span class="date">2014-05-30</span><a href="news.html">《程序猿，请晒出你的童年》活动获奖公告</a></li>
+							<li><span class="date">2014-05-28</span><a href="news.html">【慕课访谈】破茧成蝶-美女程序员的蜕变史</a></li>
+							<li><span class="date">2014-06-01</span><a href="news.html">【慕客访谈 用户篇】“有为屌丝”在路上</a></li>
+							<li><span class="date">2014-06-01</span><a href="news.html">【有奖活动】给父亲的三行书信</a></li>
+							<li><span class="date">2014-05-30</span><a href="news.html">《程序猿，请晒出你的童年》活动获奖公告</a></li>
+							<li><span class="date">2014-05-28</span><a href="news.html">【慕课访谈】破茧成蝶-美女程序员的蜕变史</a></li>
+							<li><span class="date">2014-06-01</span><a href="news.html">【慕客访谈 用户篇】“有为屌丝”在路上</a></li>
+							<li><span class="date">2014-06-01</span><a href="news.html">【有奖活动】给父亲的三行书信</a></li>
+							<li><span class="date">2014-05-30</span><a href="news.html">《程序猿，请晒出你的童年》活动获奖公告</a></li>
+							<li><span class="date">2014-05-28</span><a href="news.html">【慕课访谈】破茧成蝶-美女程序员的蜕变史</a></li>
+							<li><span class="date">2014-06-01</span><a href="news.html">【慕客访谈 用户篇】“有为屌丝”在路上</a></li>
+							<li><span class="date">2014-06-01</span><a href="news.html">【有奖活动】给父亲的三行书信</a></li>
+							<li><span class="date">2014-05-30</span><a href="news.html">《程序猿，请晒出你的童年》活动获奖公告</a></li>
+							<li><span class="date">2014-05-28</span><a href="news.html">【慕课访谈】破茧成蝶-美女程序员的蜕变史</a></li>
+							<li><span class="date">2014-06-01</span><a href="news.html">【慕客访谈 用户篇】“有为屌丝”在路上</a></li>
+							<li><span class="date">2014-06-01</span><a href="news.html">【有奖活动】给父亲的三行书信</a></li>
+							<li><span class="date">2014-05-30</span><a href="news.html">《程序猿，请晒出你的童年》活动获奖公告</a></li>
+							<li><span class="date">2014-05-28</span><a href="news.html">【慕课访谈】破茧成蝶-美女程序员的蜕变史</a></li>
+						</ul>
+					</div>
+					<div class="page">
+						<a href="#">首页</a>
+						<a href="#">&lt;</a>
+						<a href="#">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+						<a href="#">&gt;</a>
+						<a href="#">尾页</a>
+					</div>
+				</div>
+			</div>
+		</div><!--wrap结束-->
+		<div class="copyright">
+			<div class="copyright_content">
+				<ul>
+					<li><a href="#">关于</a>
+						<ul>
+							<li><a href="#">品牌故事</a></li>
+							<li><a href="#">联系我们</a></li>
+							<li><a href="#">加入我们</a></li>
+							<li><a href="#">版权声明</a></li>
+						</ul></li>
+					<li><a href="#">课程</a>
+						<ul>
+							<li><a href="#">PHP开发</a></li>
+							<li><a href="#">前端开发</a></li>
+							<li><a href="#">JAVA开发</a></li>
+							<li><a href="#">Android开发</a></li>
+						</ul></li>
+					<li><a href="#">留言</a>
+						<ul>
+							<li><a href="#">新浪微博</a></li>
+							<li><a href="#">腾讯微博</a></li>
+							<li><a href="#">企业微信</a></li>
+							<li><a href="#">QQ空间</a></li>
+						</ul></li>
+					<li><a href="#">关注</a>
+						<ul>
+							<li><a href="#">意见反馈</a></li>
+							<li><a href="#">问题留言</a></li>
+							<li><a href="#">媒体联络</a></li>
+							<li><a href="#">在线客服</a></li>
+						</ul></li>
+					<li><a href="#"><img src="img/weixin.png"/>微信关注</a>
+						<ul><li><img src="img/qrcode.jpg"/></li></ul></li>
+				</ul>
+			</div>
+		</div>
+		
+		<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	</body>
+</html>
